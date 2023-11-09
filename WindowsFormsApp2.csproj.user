@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Admincreatenewuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Adminddeleteuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Adminedit2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LogInPage%282%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LogInPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManagementHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Managementrotaview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ResetPassword2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StaffHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StaffSwapShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

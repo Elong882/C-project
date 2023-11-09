@@ -1,0 +1,1101 @@
+Ôªø<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="PctLgnPgNHS.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsN
+        DhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQU
+        FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAINBRQDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDwjueT1NLz60nc/WlB4r+h0rI/GrCZPvRkilzRmmKyE3Ôªøusing System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.OleDb;
+
+namespace WindowsFormsApp2
+{
+    
+    public partial class LogInPage : Form
+    {
+        
+        public LogInPage()
+        {
+            InitializeComponent();
+            
+        }
+
+        OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\\WindowsFormsApp2\\Database36.accdb;Persist Security Info=True");
+        OleDbCommand cmd = new OleDbCommand();
+        OleDbDataAdapter da = new OleDbDataAdapter();
+        private void BtnLgnPgforgotpass_Click(object sender, EventArgs e)
+        {
+         
+            ResetPassword ResetPassword = new ResetPassword();
+            this.Hide();
+            ResetPassword.Show();
+            
+          
+        }
+
+        private void BtnLgnPgsubmit_Click(object sender, EventArgs e)
+        {
+            if (TxtLgnPgusername.Text == "" && TxtLgnPgpassword.Text == "")
+            {
+                MessageBox.Show("Username and password boxes are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (TxtLgnPgpassword.Text == TxtLgnPgconfirmpass.Text && TxtLgnPg1acctype.Text == "admin" || TxtLgnPg1acctype.Text == "Admin")
+            {
+                
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "SELECT Username FROM Admin WHERE Username = ? AND Password = ?";
+                cmd.Parameters.AddWithValue("@user", LblLgnPgusername.Text);
+                cmd.Parameters.AddWithValue("@pass", LblLgnPgpassword.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                AdminHome AdminHome = new AdminHome();
+                this.Hide();
+                AdminHome.Show();
+
+            }
+            else if (TxtLgnPgpassword.Text == TxtLgnPgconfirmpass.Text && TxtLgnPg1acctype.Text == "management" || TxtLgnPg1acctype.Text == "Management")
+            {
+                con.Open();
+                string login = "SELECT * FROM Management WHERE Username '" + TxtLgnPgusername.Text + "')";
+                login = "SELECT * FROM Management WHERE Password = '" + TxtLgnPgpassword.Text + "')";
+                cmd = new OleDbCommand(login, con);
+                OleDbDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read() == true)
+                {
+
+                    ManagementHome ManagementHome = new ManagementHome();
+                    this.Hide();
+                    ManagementHome.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TxtLgnPgusername.Text = "";
+                    TxtLgnPgpassword.Text = "";
+                    TxtLgnPgusername.Focus();
+                }
+
+            }
+            else if (TxtLgnPgpassword.Text == TxtLgnPgconfirmpass.Text && TxtLgnPg1acctype.Text == "staff" || TxtLgnPg1acctype.Text =="Staff")
+            {
+
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "SELECT Username FROM Staff WHERE Username = ? AND Password = ?";
+                cmd.Parameters.AddWithValue("@user", LblLgnPgusername.Text);
+                cmd.Parameters.AddWithValue("@pass", LblLgnPgpassword.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                StaffHome staffHome = new StaffHome();
+                this.Hide();
+                staffHome.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Passwords don't match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TxtLgnPg{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Microsoft.Win32.Registry/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "6.0.0",
+          "System.Security.Permissions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Data.OleDb/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0",
+          "System.Configuration.ConfigurationManager": "6.0.0",
+          "System.Diagnostics.PerformanceCounter": "6.0.0",
+          "System.Memory": "4.5.4",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Data.OleDb.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.OleDb.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Data.OleDb.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Diagnostics.PerformanceCounter/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0",
+          "System.Configuration.ConfigurationManager": "6.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Drawing.Common/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "6.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Drawing.Common.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp3.1/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "ru• ”®•  ∆(¢äi R—Fj¿Q≈ô£9†ä:“˛gûî c4ò‚ó4qE¿f-)¢ìWÏ –N(Õ%+[a›ΩÄúäLs«†sE&ëIãúåRgQR‡ûç5µ‘–0h§da›N+J◊≈∫Õë˝∆•s∫HA˝+(
+*v¯W‹_¥óvt—¸JÒ\cÂÒ§üÓ‹∏˛µ2|TÒÇÙÒ6™>óo˛5 få÷r√Q{¡}À¸ÅV©§˛˜˛gTˇ <_ Áƒ⁄©ˇ ∑∑ˇ Å˛$x≠ÜàıCıªÒÆsu'Zæ¬˚ó˘÷®˜ì˚ﬂ˘õ74Ò∆|›j˛@Ωp«˙’ukÀüı◊3KÎΩ…™îU}^í⁄+Ó_‰G¥üw˜±Œ≈õ$”söuV‹©+$ge{à§èZî1®©Ù‘m®l)4”Õg¥’Ä“)ªqO4T¥	w;î¥"¥¬ó•6ñô"‰QëFE få—G fé(¢Ä(¢ä (¢ä`QE QE QE ¥îR ÌIﬁó∑ùÈ0B®‚ä•ôÉı?ZQM=O÷úßC~ÇA•Õ'Z`†‚ç¥PU¬äJ\Êë Mä(fó4ôt†4¥få”RR—äw £“ê‘Ä¶äJL–Öô£"òöL“EŸ§íä.ìKöm\Õ.i¥PÅ§ÔIJ:–—äLÛK÷Ä
+3öM¥t†å—ûh§ö3A9£ä \“fé)x†b@4qG fó4qI≈  –M.E&@¶ÊäL—ö-ì∏ßpP1E¢‡§4ßäL‚•é‡)sFhÎ@M≈-i†lIä´à3÷óΩ†ÒJ‡&h&ÉÕ.Hi3GdP0&Äh‚óä!4π£äJ†—⁄å”RRìö(i3IEI•Õ6ä.Êîöm\IöJ(∏Õ 4îP≥E6óä ZNΩ©sFi QIú“„5Híóô§ö¢ñêƒÕ.i8£ä •ÕRSs≈&ir(»†BJwÑ–!)E‚åÒHaﬁñì4π†b){–M†AE&y•Õ0
+©:–úRbÇ(¶ (4bäL Qä•Õ F(Õ¶¥¥c4ò¶ﬁä≈ê 4Qé)r) ÜîRfó4¿Z)3Fhh§Õ†B“Fh†aI∆h≈)Ä3@†TÄfó4úbä` ä\‚ê‚íêŒi3IE;Ä‚hÕ6ä.ìKöm\îöm\fì4îQpö@i(¢‡)4π¶—E¿\““v• Rw•84ù≈&rÙ¢ëzQYò11…˙–åƒy‰“nˆ´‘›l;ú“ûî–sFr)ÖÖ≈§œµÊÄ∞∏£ô§›H,8ä §&ì4√±F)π£4
+√Ä†ä@y¸i3ë”ﬁÄ∞ÒúRsIö…¶å—änhÕ!ÿ\QäL—öaqÕSsäRh
+¶Êå–;≈¶Êå–ä1MÕ†Vä1MÕ†v¶Êîûhä0iˆ§œµ∞‚(≈!4L,)bõö3H,8
+¶Êå–;≈¶Êå–ä ¶Êå–+≈§'ö@hábÇ)π£<–§å˚S∞¨;òÊì4RáQMÕ†VÉAÈH¶F)õΩ©sH,:Åú”sFiÖáu4SI≈†,/4Iö3÷Ä∞∏†äL“fêXv(≈74fÅÿv(õö3@¨;bêûi†vä¶Êîö¬ÅF)π£4ábåSsFh≈¶Êå–+≈¶Êå–;åSsJO4Ö≈¶ÉFh"Ä)	§Õaÿ£‹“Á⁄ÅXP(¡§Õ&}©ÿ,<
+LRfåÛ@X\P&s⁄ì4Ç√±F)	Êêaÿ†äniI†,(bö4n†,?ÄRfÄy˝)ä¬ëF8¶Ó‡QöAaÿ£‹—öa¿QäniIÊÄ∞∏£–h›@¨8ä1HM†,.(≈7>‘§”∞XP("ì4gå—`∞∏£ô§œ4Ç√à†Rg⁄ì<tß`∞‚9•∆i§–aph"ö⁄îö,
+1MÕ§ä ¶Êå–;"åqMÕ†VäR)ôÊó>‘Ö†ÉönxÈJM0∞‚)1IöL—`∞ÏP!4ô§ä1MÕ†,;bõö3@Ï;bõö3@Xv(õö3@¨;bêûi†vä¶Êîö¬ÅF)π£4ábåSsFh≈¶Êå–+≈¶Êå–§œµ Û@Q≈∆}§qE`Í$Ï…ˆmÍˇŸ      fÀ  Œ Ôæ   )  óSystem.Resources.Extensions.DeserializingResourceReader, System.Resources.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51éSystem.Resources.Extensions.RuntimeResourceSet, System.Resources.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51         oSystem.Drawing.Bitmap, System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51PADPADPX+õ,    Ò  (P c t S t a f f H m e N H S . I m a g e     @íˇÿˇ‡ JFIF       ˇ€ C 
+
+
+ˇ€ C		ˇ¿ " ˇƒ           	
+ˇƒ µ   } !1AQa"q2Åë°#B±¡R—$3brÇ	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzÉÑÖÜáàâäíìîïñóòôö¢£§•¶ß®©™≤≥¥µ∂∑∏π∫¬√ƒ≈∆«»… “”‘’÷◊ÿŸ⁄·‚„‰ÂÊÁËÈÍÒÚÛÙıˆ˜¯˘˙ˇƒ        	
+ˇƒ µ  w !1AQaq"2ÅBë°±¡	#3Rbr—
+$4·%Ò&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzÇÉÑÖÜáàâäíìîïñóòôö¢£§•¶ß®©™≤≥¥µ∂∑∏π∫¬√ƒ≈∆«»… “”‘’÷◊ÿŸ⁄‚„‰ÂÊÁËÈÍÚÛÙıˆ˜¯˘˙ˇ⁄   ? éÁì‘“ÛÎI‹˝iA‚ø°“≤?∞ô>Ùdä\—öb≤q£q•Õ†vBgﬁç∆ó4fÄ≤wΩ>¥π£4êõç˜•Õêõè≠4¥~4êô£'‘˛tfå–AìÔFO≠.hÄ≤&åüz\—ö»Lö3ÔFhÕd˜4n4få–Aüz2}hÕ†,É&å—ö3@YOøÁFhÕ†,É>Ùd—ö3@Y}Ë‹hÕ4êd˚—íGZ\—ö»2Hˇ Î—Œ(£µ≤üZLö\—ö»BMç.hÕ≤4n4π£4êõç˜•Õ†,Ñ‹h›ÔKö3@Y	ìÎF„KFh!3ÔF„ÎFhÕd4d˚“—ö»LüSKìFh&Ä≤'=Ë…£4@Y}Ë…£4fÄ≤˚—üsFh†,Éq£>Ùfä»2}h…¢ñÄ≤qı£qı?ù-†,ÑÕ>¥π¢Ä≤q£&å“ÊÄ≤&óû‘E≤úw£q•œô†vAüz2}hÕ†,É&å—ö3@Y„Í:2hÕ†,É'ﬁåüzPh†,Ñ…£q•Õ†,Ñ›ÔFO≠.hÕd&„F}ÈsFh!7Z2isFh!3F„Kö3@Y	ö7\—ö»M∆å˚“Êå–Bn4n˜•Õ†,Ñ…ı£q•Õ†,ÑœΩè≠-%d4få—ö»2}ˇ :3FhÕd˜£&å—ö»3ÔFM£4êgﬁå˚ö3Edç>¥fä»2}Ë…£4fÄ≤&ì'‘˛tπ§Ä≤ëﬁç∆ó4fÄ≤q£>Ùπ£4êõçΩÈsEd&}Ë…ˇ &ä9†,É>Êç«÷ä3@YM4få–Aìûˇ ù.Ni3Kö»9œZ9ÕP+!2h…•Õ†vBd˙ö2q‘“Êå–AíGˇ ^éqFhœ
+»9§Êó4fÄ≤i9˜¸ÈsEd—Œz—EdÊé}h¢Ä≤hÁ÷ä)ÿ,ÑÁﬁåüz\—öAd&h…ı•ÕÅŸ	ìFO≠-†,Ñ…˜¸Ë…£4π†,Ñ£$˙“Êì4ê‰\¶äÒ‘—XÚEÙ2ÊcSıßî”‘˝i¬∑5Ë•†–iÄbåQE £Q@ GZ( ¿£Q@)1ÌKGZ AK≈§∆)X —ö3≈†äJ\—`
+))h∞qFi(∞
+q@≈§¢¿/qA£4Xä8§•Õ ‚å
+§¢¿;ä)3KÄ)ÿ¸(ºQ“ê	KúRc&Ç{PÊäNî¥¿1F(¢ÄQä:—@(≈fÄP(Î@(‚äNÙ Qö(Õ+ (†—öv Õ“QH†‚ÅIEÄ^(£4îX¿¢ä(∞ÎIKö,Fhu4X4Ω®≈&0E)†RihÍ(2hÕPµ ÕhÕÏÅGfíïÄ^(¿†—ö,≈îπ¢¿£4îP““få”EùhÈ@ÅF(¢Ä(≈(†bä( ≈£≠ båQE 
+1Hh "é(Õ% 4u§¢Ää8†—ö,≈RRÊã qGIEÄ\
+(Õ%p(¿£4Q`
+(ÔE Ôªønamespace WindowsFormsApp2
+{
+    partial class LogInPage
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInPage));
+            this.TxtLgnPgusername = new System.Windows.Forms.TextBox();
+            this.TxtLgnPgpassword = new System.Windows.Forms.TextBox();
+            this.LblLgnPgusername = new System.Windows.Forms.Label();
+            this.LblLgnPgpassword = new System.Windows.Forms.Label();
+            this.BtnLgnPgforgotpass = new System.Windows.Forms.Button();
+            this.BtnLgnPgsubmit = new System.Windows.Forms.Button();
+            this.PctLgnPgNHS = new System.Windows.Forms.PictureBox();
+            this.CheckBxLogInPgshowpass = new System.Windows.Forms.CheckBox();
+            this.LblLgnPgconfirmpass = new System.Windows.Forms.Label();
+            this.TxtLgnPgconfirmpass = new System.Windows.Forms.TextBox();
+            this.LblLgnPg1acctype = new System.Windows.Forms.Label();
+            this.TxtLgnPg1acctype = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.PctLgnPgNHS)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // TxtLgnPgusername
+            // 
+            this.TxtLgnPgusername.Location = new System.Drawing.Point(194, 113);
+            this.TxtLgnPgusername.Name = "TxtLgnPgusername";
+            this.TxtLgnPgusername.Size = new System.Drawing.Size(344, 31);
+            this.TxtLgnPgusername.TabIndex = 0;
+            // 
+            // TxtLgnPgpassword
+            // 
+            this.TxtLgnPgpassword.Location = new System.Drawing.Point(194, 190);
+            this.TxtLgnPgpassword.Name = "TxtLgnPgpassword";
+            this.TxtLgnPgpassword.PasswordChar = '‚Ä¢';
+            this.TxtLgnPgpassword.Size = new System.Drawing.Size(344, 31);
+            this.TxtLgnPgpassword.TabIndex = 1;
+            // 
+            // LblLgnPgusername
+            // 
+            this.LblLgnPgusername.AutoSize = true;
+            this.LblLgnPgusername.ForeColor = System.Drawing.Color.White;
+            this.LblLgnPgusername.Location = new System.Drawing.Point(194, 85);
+            this.LblLgnPgusername.Name = "LblLgnPgusername";
+            this.LblLgnPgusername.Size = new System.Drawing.Size(95, 25);
+            this.LblLgnPgusername.TabIndex = 2;
+            this.LblLgnPgusername.Text = "Username:";
+            // 
+            // LblLgnPgpassword
+            // 
+            this.LblLgnPgpassword.AutoSize = true;
+            this.LblLgnPgpassword.ForeColor = System.Drawing.Color.White;
+            this.LblLgnPgpassword.Location = new System.Drawing.Point(199, 155);
+            this.LblLgnPgpassword.Name = "LblLgnPgpassword";
+            this.LblLgnPgpassword.Size = new System.Drawing.Size(91, 25);
+            this.LblLgnPgpassword.TabIndex = 3;
+            this.LblLgnPgpassword.Text = "Password:";
+            // 
+            // BtnLgnPgforgotpass
+            // 
+            this.BtnLgnPgforgotpass.Location = new System.Drawing.Point(634, 365);
+            s      P E : \ W i n d o w s F o r m s A p p 2 \ A d m i n d d e l e t e u s e r . c s   (   B E : \ W i n d o w s F o r m s A p p 2 \ L o g I n P a g e . c s      D D : \ W i n d o w s F o r m s A p p 2 \ A d m i n e d i t 2 . c s   "                                                                                                                                                                                                                                                                                   n t H o m e . c s   	   P D : \ W i n d o w s F o r m s A p p 2 \ A d m i n d d e l e t e u s e r . c s   #   Ç C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ A d m i n d d e l e t e u s e r . c s      ä C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ W i n d o w s F o r m s A p p 2 . c s p r o j      t C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ S t a f f H o m e . c s      L D : \ W i n d o w s F o r m s A p p 2 \ S t a f f S w a p S h i f t . c s   .   T E : \ W i n d o w s F o r m s A p p 2 \ A d m i n c r e a t e n e w u s e r . c s      l C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ F o r m 1 . c s      B E : \ W i n d o w s F o r m s A p p 2 \ A d m i n H o m e . c s   ,   J E : \ W i n d o w s F o r m s A p p 2 \ R e s e t P a s s w o r d . c s      L D : \ W i n d o w s F o r m s A p p 2 \ R e s e t P a s s w o r d 2 . c s      P E : \ W i n d o w s F o r m s A p p 2 \ A d m i n d d e l e t e u s e r . c s   (   D D : \ W i n d o w s F o r m s A p p 2 \ A d m i n e d i t 2 . c s   "   B E : \ W i n d o w s F o r m s A p p 2 \ L o g I n P a g e . c s                                                                                                                                                                                                                                                                                      F o r m s A p p 2 \ A d m i n e d i t 2 . D e s i g n e r . c s      B D : \ W i n d o w s F o r m s A p p 2 \ A d m i n H o m e . c s       D E : \ W i n d o w s F o r m s A p p 2 \ A d m i n e d i t 1 . c s   *   T D : \ W i n d o w s F o r m s A p p 2 \ A d m i n c r e a t e n e w u s e r . c s      T E : \ W i n d o w s F o r m s A p p 2 \ M a n a g e m e n t r o t a v i e w . c s   '   B D : \ W i n d o w s F o r m s A p p 2 \ L o g I n P a g e . c s      L E : \ W i n d o w s F o r m s A p p 2 \ R e s e t P a s s w o r d 2 . c s      B E : \ W i n d o w s F o r m s A p p 2 \ S t a f f H o m e . c s      Ü C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ M a n a g e m e n t r o t a v i e w . c s      î C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ W i n d o w s F o r m s A p p 2 . c s p r o j . u s e r      ~ C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ M a n a g e m e n t H o m e . c s   	   P D : \ W i n d o w s F o r m s A p p 2 \ A d m i n d d e l e t e u s e r . c s   #   Ç C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ A d m i n d d e l e t e u s e r . c s      ä C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ W i n d o w s F o r m s A p p 2 . c s p r o j      t C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ S t a f f H o m e . c s      L D : \ W i n d o w s F o r m s A p p 2 \ S t a f f S w a p S h i f t . c s   .   T E : \ W i n d o w s F o r m s A p p 2 \ A d m i n c r e a t e n e w u s e r . c s      l C : \ U s e r s \ D o o b s \ s o u r c e \ r e p o s \ W i n d o w s F o r m s A p p 2 \ F o r m 1 . c s      B E : \ W i n d o w s F o r m s A p p 2 \ A d m i n H o m e . c s   ,   J E : \ W i n d o w s F o r m s A p p 2 \ R e s e t P a s s w o r d . c s      L D : \ W i n d o w s F o r m s A p p 2 \ R e s e t P a s s w o r d 2 . c Ôªø
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsApp2", "WindowsFormsApp2.csproj", "{6BB668EF-D312-481E-ACDA-160E0810BBE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Debug|x64.ActiveCfg = Debug|x64
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Debug|x64.Build.0 = Debug|x64
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Debug|x86.ActiveCfg = Debug|x86
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Debug|x86.Build.0 = Debug|x86
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Release|x64.ActiveCfg = Release|x64
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Release|x64.Build.0 = Release|x64
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Release|x86.ActiveCfg = Release|x86
+		{6BB668EF-D312-481E-ACDA-160E0810BBE2}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {570A6A59-1788-4099-B890-927552B1EA2B}
+	EndGlobalSection
+EndGlobal
+                                                                                                                                                                                                           xtAdmCreatemobile.Text + "','" + TxtAdmCreatepostcode.Text + "')";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("New user has been created");
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was an error trying to create this user" + ex);
+                }
+            }
+            if (TxtAdmCreateAccType.Text == "Staff" || TxtAdmCreateAccType.Text == "staff")
+            {
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "INSERT INTO Staff ([Username], [Password],[Forename],[Surname],[Email],[Mobile number],[Postcode]) values('" + TxtAdmCreateusername.Text + "','" + TxtAdmCreatepassword.Text + "','" + TxtAdmCreateforename.Text + "','" + TxtAdmCreatesurname.Text + "','" + TxtAdmCreateemail.Text + "','" + TxtAdmCreatemobile.Text + "','" + TxtAdmCreatepostcode.Text + "')";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("New user has been created");
+                    con.Close();
+                    con.Dispose();
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("There was an error trying to create this user");
+                }
+            }
+            if (TxtAdmCreateAccType.Text == "Management" || TxtAdmCreateAccType.Text == "management")
+            {
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "INSERT INTO Management ([ManagementID],[Username],[Password],[Forename],[Surname],[Email],[Mobile number],[Postcode]) values ('" + TxtAdmCreateID.Text + "','" + TxtAdmCreateusername.Text + "','" + TxtAdmCreatepassword.Text + "','" + TxtAdmCreat.           ÑiÅTÅT iÅTâ@    ..          ÑiÅTÅT iÅTÜ    Bg s . j s  Qo n   ˇˇˇˇˇˇ  ˇˇˇˇP r o j e  Qc t S e t t   i n PROJEC~1JSO   g[~T~T g[~Tä@%   As l n x .  +s q l i t e     ˇˇSLNX~1  SQL   g[~T~T g[~Tî@  Ba t e . j  Ès o n   ˇˇˇˇ  ˇˇˇˇV S W o r  Èk s p a c e   S t VSWORK~1JSO   g[~T~T g[~TMN   Bp p 2   ˇˇ áˇˇˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇW i n d o  áw s F o r m   s A WINDOW~1    iÅTÅT Pd~TM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    {
+  "CurrentProjectSetting": null
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           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p p 2 . S  €t a f f H o   m e W i n d o  €w s F o r m   s A WIB497~1RES   p[~TÅT kÅTù@fÀ  AT e m p P  FE   ˇˇˇˇˇˇˇˇ  ˇˇˇˇTEMPPE      'iÅTÅT Wd~T1û    Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   o[~TÅT  óiÅT £‰ Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   o[~TÅT  öiÅT R  De . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇe m b l y  CR e f e r e   n c p p 2 . c  Cs p r o j A   s s W i n d o  Cw s F o r m   s A WI580E~1CAC   o[~TÅT öiÅT r$  De s   ˇˇˇˇ Nˇˇˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇS h i f t  N. r e s o u   r c p p 2 . S  Nt a f f S w   a p W i n d o  Nw s F o r m   s A WI1AF2~1RES  -¨iÅTÅT kÅT¢@¥   Âe . c a c  ~h e   ˇˇˇˇˇˇ  ˇˇˇˇÂn e r a t  ~e R e s o u   r c Âp p 2 . c  ~s p r o j .   G e ÂW i n d o  ~w s F o r m   s A ÂI66E3~1CAC   o[~TÅT  ≠iÅT‹@  ÂCX2450 TMP >ÆiÅTÅT ØiÅTôq ™ Bp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇW i n d o  w s F o r m   s A WINDOW~1EXE  >ÆiÅTÅT ØiÅTôq ™ Cp y C o m  p l e t e     ˇˇˇˇp p 2 . c  s p r o j .   C o W i n d o  w s F o r m   s A WINDOW~1COP  @∞iÅTÅT  ekÅT      Âc e . c a  √c h e   ˇˇˇˇ  ˇˇˇˇÂs e m b l  √y R e f e r   e n Âp p 2 . c  √s p r o j .   A s ÂW i n d o  √w s F o r m   s A ÂINDOW~3CAC   n[~TÅT  |jÅT Ïõ ÂPPHOST EXE .{jÅTÅT  e≠R   § Âc e . c a  √c h e   ˇˇˇˇ  ˇˇˇˇÂs e m b l  √y R e f e r   e n Âp p 2 . c  √s p r o j .   A s ÂW i n d o  √w s F o r m   s A ÂINDOW~3CAC   n[~TÅT  }jÅT K4  Âc e . c a  √c h e   ˇˇˇˇ  ˇˇˇˇÂs e m b l  √y R e f e r   e n Âp p 2 . c  √s p r o j .   A s ÂW i n d o  √w s F o r m   s A ÂINDOW~3CAC   n[~TÅT  kÅT‡@:∑ APPHOST EXE âkÅTÅT kÅTå¢ ™ Dc e . c a  √c h e   ˇˇˇˇ  ˇˇˇˇs e m b l  √y R e f e r   e n p p 2 . c  √s p r o j .   A s W i n d o  √w s F o r m   s A WINDOW~3CAC   n[~TÅT 7kÅT‡@˝  De . c a c  ~h e   ˇˇˇˇˇˇ  ˇˇˇˇn e r a t  ~e R e s o u   r c p p 2 . c  ~s p r o j .   G e W i n d o  ~w s F o r m   s A WI66E3~1CAC   o[~TÅT ekÅT‹@§                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  LAPTOP-MKO677AQ                 Admin                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           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S h i f t  N. r e s o u   r c p p 2 . S  Nt a f f S w   a p W i n d o  Nw s F o r m   s A WI1AF2~1RES   Ñ|TÇT ¥~ÇTé@pÀ  AT e m p P  FE   ˇˇˇˇˇˇˇˇ  ˇˇˇˇTEMPPE      wiÅTÅT Yd~Tô@    Ds   ˇˇˇˇˇˇ ﬂˇˇˇˇˇˇˇˇˇˇˇˇ  ˇˇˇˇh i f t .  ﬂr e s o u r   c e p p 2 . S  ﬂt a f f A d   d S W i n d o  ﬂw s F o r m   s A WIB4D2~1RES  C≤~ÇTÇT ≥~ÇT4AnÀ  Dc e . c a  √c h e   ˇˇˇˇ  ˇˇˇˇs e m b l  √y R e f e r   e n p p 2 . c  √s p r o j .   A s W i n d o  √w s F o r m   s A WINDOW~3CAC   thÅTÅT &iÅT$F˝  Âe . c a c  ~h e   ˇˇˇˇˇˇ  ˇˇˇˇÂn e r a t  ~e R e s o u   r c Âp p 2 . c  ~s p r o j .   G e ÂW i n d o  ~w s F o r m   s A ÂI66E3~1CAC   zTÅT  iiÅTñOõ  ÂPPHOST EXE  jiÅTÅT  m≠R    APPHOST EXE dÄkÅTÅT ÅkÅT•  Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  :lÅT ñ¬ ÂCXCF4E TMP :lÅTÅT ;lÅT≠   Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  :lÅTÅT  Œ@WT    Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  =lÅT ÷& Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  ClÅT r$  ÂCX106E TMP HDlÅTÅT ElÅT◊   Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  HDlÅTÅT  Œ@WT    ÂCX1702 TMP ¬glÅTÅT hlÅTˇ   Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  ¬glÅTÅT  Œ@WT    ÂCXD433 TMP æ§lÅTÅT •lÅT-•  Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  æ§lÅTÅT  Œ@WT    Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  yÅT % Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  yÅT r$  Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  êÅT % Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  cêÅT r$  Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  ’îÅT„@% Âe . c a c  ~h e   ˇˇˇˇˇˇ  ˇˇˇˇÂn e r a t  ~e R e s o u   r c Âp p 2 . c  ~s p r o j .   G e ÂW i n d o  ~w s F o r m   s A ÂI66E3~1CAC   zTÅT  ÷îÅTñOõ  ÂCXF017 TMP a÷îÅTÅT ◊îÅTU•  Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  a÷îÅTÅT  Œ@WT    Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  ïÅT„@r$  ÂCXBAE6 TMP +ïÅTÅT ïÅT}•  Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  +ïÅTÅT  Œ@WT    ÂCXE75  TMP ∂!ïÅTÅT "ïÅT••  Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  ∂!ïÅTÅT  Œ@WT    ÂCXD740 TMP L`ïÅTÅT aïÅTÕ•  Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  L`ïÅTÅT  Œ@WT    ÂCXF0A0 TMP PÜïÅTÅT áïÅTı•  Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  PÜïÅTÅT  Œ@WT    ÂCX4EF  TMP ò´ïÅTÅT ¨ïÅT¶  Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  ò´ïÅTÅT  Œ@WT    Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  –ïÅT€@% ÂCX18CB TMP —ïÅTÅT “ïÅTE¶  Âp p 2 . e  x e   ˇˇˇˇˇˇ  ˇˇˇˇÂW i n d o  w s F o r m   s A ÂINDOW~1EXE  —ïÅTÅT  Œ@WT    Âe . c a c  Ch e   ˇˇˇˇˇˇ  ˇˇˇˇÂe m b l y  CR e f e r e   n c Âp p 2 . c  Cs p r o j A   s s ÂW i n d o  Cw s F o r m   s A ÂI580E~1CAC   q[~TÅT  ÏïÅT€@r$  ÂCXE266 TMP ∞ÏïÅTÅT ÌïÅTe•  Œ Ôæ   )  óSystem.Resources.Extensions.DeserializingResourceReader, System.Resources.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51éSystem.Resources.Extensions.RuntimeResourceSet, System.Resources.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51         oSystem.Drawing.Bitmap, System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51PADPADPbxúˆ    ˚  2P c t B x S t a f f S w a p s h i f t . I m a g e     @íˇÿˇ‡ JFIF       ˇ€ C 
+
+
+ˇ€ C		ˇ¿ " ˇƒ           	
+ˇƒ µ   } !1AQa"q2Åë°#B±¡R—$3brÇ	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzÉÑÖÜáàâäíìîïñóòôö¢£§•¶ß®©™≤≥¥µ∂∑∏π∫¬√ƒ≈∆«»… “”‘’÷◊ÿŸ⁄·‚„‰ÂÊÁËÈÍÒÚÛÙıˆ˜¯˘˙ˇƒ        	
+ˇƒ µ  w !1AQaq"2ÅBë°±¡	#3Rbr—
+$4·%Ò&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzÇÉÑÖÜáàâäíìîïñóòôö¢£§•¶ß®©™≤≥¥µ∂∑∏π∫¬√ƒ≈∆«»… “”‘’÷◊ÿŸ⁄‚„‰ÂÊÁËÈÍÚÛÙıˆ˜¯˘˙ˇ⁄   ? éÁì‘“ÛÎI‹˝iA‚ø°“≤?∞ô>Ùdä\—öb≤q£q•Õ†vBgﬁç∆ó4fÄ≤wΩ>¥π£4êõç˜•Õêõè≠4¥~4êô£'‘˛tfå–AìÔFO≠.hÄ≤&åüz\—ö»Lö3ÔFhÕd˜4n4få–Aüz2}hÕ†,É&å—ö3@YOøÁFhÕ†,É>Ùd—ö3@Y}Ë‹hÕ4êd˚—íGZ\—ö»2Hˇ Î—Œ(£µ≤üZLö\—ö»BMç.hÕ≤4n4π£4êõç˜•Õ†,Ñ‹h›ÔKö3@Y	ìÎF„KFh!3ÔF„ÎFhÕd4d˚“—ö»LüSKìFh&Ä≤'=Ë…£4@Y}Ë…£4fÄ≤˚—üsFh†,Éq£>Ùfä»2}h…¢ñÄ≤qı£qı?ù-†,ÑÕ>¥π¢Ä≤q£&å“ÊÄ≤&óû‘E≤úw£q•œô†vAüz2}hÕ†,É&å—ö3@Y„Í:2hÕ†,É'ﬁåüzPh†,Ñ…£q•Õ†,Ñ›ÔFO≠.hÕd&„F}ÈsFh!7Z2isFh!3F„Kö3@Y	ö7\—ö»M∆å˚“Êå–Bn4n˜•Õ†,Ñ…ı£q•Õ†,ÑœΩè≠-%d4få—ö»2}ˇ :3FhÕd˜£&å—ö»3ÔFM£4êgﬁå˚ö3Edç>¥fä»2}Ë…£4fÄ≤&ì'‘˛tπ§Ä≤ëﬁç∆ó4fÄ≤q£>Ùπ£4êõçΩÈsEd&}Ë…ˇ &ä9†,É>Êç«÷ä3@YM4få–Aìûˇ ù.Ni3Kö»9œZ9ÕP+!2h…•Õ†vBd˙ö2q‘“Êå–AíGˇ ^éqFhœ
+»9§Êó4fÄ≤i9˜¸ÈsEd—Œz—EdÊé}h¢Ä≤hÁ÷ä)ÿ,ÑÁﬁåüz\—öAd&h…ı•ÕÅŸ	ìFO≠-†,Ñ…˜¸Ë…£4π†,Ñ£$˙“Êì4ê‰\¶äÒ‘—XÚEÙ2ÊcSıßî”‘˝i¬∑5Ë•†–iÄbåQE £Q@ GZ( ¿£Q@)1ÌKGZ AK≈§∆)X —ö3≈†äJ\—`
+))h∞qFi(∞
+q@≈§¢¿/qA£4Xä8§•Õ ‚å
+§¢¿;ä)3KÄ)ÿ¸(ºQ“ê	KúRc&Ç{PÊäNî¥¿1F(¢ÄQä:—@(≈fÄP(Î@(‚äNÙ Qö(Õ+ (†—öv Õ“QH†‚ÅIEÄ^(£4îX¿¢ä(∞ÎIKö,Fhu4X4Ω®≈&0E)†RihÍ(2hÕPµ ÕhÕÏÅGfíïÄ^(¿†—ö,≈îπ¢¿£4îP““få”EùhÈ@ÅF(¢Ä(≈(†bä( ≈£≠ båQE 
+1Hh "é(Õ% 4u§¢Ää8†—ö,≈RRÊã qGIEÄ\
+(Õ%p(¿£4Q`
+(ÔE  Q@†—aãF}©3@¶!h"ä( ‚ì¶ä@î–O bå
+£(‚Çh¢¿
+8•∆zRQ`(§•Õ;	Ë.hœ4Ä—≈ ≠ÈKä1J·a1E.)1E¬¿M!4§SM&¿3KöJ)\C≥Fi4b≠ π†ö8§ÕM-&hÕ .hœJLÛGZª £µ!ÔFhÕK ˙—‘—@4Ä¢Çhœ¬Êå‚íå”∞X3öA÷ú))FE/J+3ùàzü≠(¶ûßÎN¢7ËÉE¿(¢ä`QE QE QE I»•=) ≈Õ&qKöõ¢[∞L—ëäN¥Æ=≈§ÊäZísAÕQNËaÕ—F(∫ ÊÅö1F(∫ Êéh≈¢Ëö9£bã†hÊåbíã°£≠74†‰—t+é˜ßSisäõî§4î¥ÅâJ(È@˝)°EU QE QEÄ(£Ùc• ¥‹“Ù§§¿(¢úÆñ‡6äqÙ§¸*õCBQHh•t
+9£bù–4sF(≈;†ö(4ï-†4u§Õ(4]QGJ-+Ç◊`Õ¢êP≥GZ)@ß†#ö:Sà«ZaK∏t‘3E'åÊöhvh¸ii*ÓÖ`ÊÅö(‚ã°á4sGQÃÄ9£öZ(∫@fóÇûi6ÄJ3K⁄öx§ ŒhÜî†ΩQLä:Q@Q@QHéh†ú LöBhÕ#*Xö3H;57¥öR'Ji°¥-'4
+1Wt Êéh≈]9£ö8£ä.Ä9£ö)(∫‘RfÄy§‰ÄZv(Zìg©∏.ƒTSàÊôVò≠®·IFh≈•†ÉF) Õ4îP≥Fi¢ñê
+(£µ/ÎI≤ñ◊ÅKIKòñ√•&qA§lÅÕ>eπ<¡F)÷–Ku é⁄W=$˛Uÿxw‡˜çºS*G¶¯_T∏›»o≥2ØÊ@ùJÙÈ´ Iz≥h¬s¯bŸ«bîW∏Èø±ü≈MKÛ[Éﬁ‚U\~µ⁄hOà7Ï?¥/¥Ω9HÔ)êè¿
+Úßú‡°§™ØºÌÜ=©≥Â¿)qö˚Fœ˛	µ©2Éu‚Îe=¸´v?ŒµÌø‡õ6Àè?∆ü˜-á¯◊∏É ü«¯3©e8∑ˆl|.Wﬁì˜Ìø¸{A_ıæ)Ω˜aQ˝kF¯'gÖ# 6ø~˛˛Z‘¨yz˚M¸ôk'∆ˆGÁÅ“û’˙,‡ù˛«¸áuˇ l÷†ü˛	’·YÀ‚Ù>æZˇ çO˙…óæØÓí‚¸èœá“Ç∏Øø'ˇ ÇnËmü'≈◊…˛ı∫üÎY◊M{Rì„)ø‡v£˙µƒ9{‡»˛∆≈'ü
+t§<ö˚j_¯&Ω∆w„$ˇ ÅZüÒ¨Îœ¯&ﬁ∏äM∑ãÏ§>í@√5≤œ˛^~¸àyN-}ì„lRbæ§’‡ûø¨‘õ=KJΩ#∞vC˙äÂØb?ä÷d„FäÁ·∏SüŒ∫#õ‡eµU˜òºªÈ≥¡(ØP◊?fOâ⁄
+ñπÖ˚®Ô
+â?Ùkä‘<‚-%äﬁËwˆå:âmùòÆ˙x™U·4˛h‰ù
+∞¯¢◊…òy•¢hﬁŸˆHåçËF'Oo≠v©&Æaf∑C®È@4°sE√`§ßbìü0!£IVäQ“íó≠PÉ∞£•`RT∞Có•/J+3ùç=O÷ú)ß©˙“ä—Ù–h4S ¢ä( ¢ä)ÄQGJ( ¢ä) îÜùå“Q`k—øgøá∂üæ/h‘VC¶‹»ÌsÂ>÷ÿ®«É€ê+ŒÎÍü¯'èÖ´ÒcW÷ôIãL±¬∂8ﬁÁ»3zÚ√·*Tã≥∂üëÈeÙc[I_SË’˝ÇæØ«R`?Ω|ﬂ·Rèÿ?·HÈóß˛ﬂ_¸kËà≈H~Q˝©çˇ ü≤˚œ—>°Ü˛E˜:√|(œ¸ÇØ>OÒ£˛?·7˝oa/¯◊—dbåQ˝©çˇ üØÔ®aøë}«Œü¡ˇ 	øË{ˇ É	∆ì˛;·7˝oa/¯◊—ò£jcÁÏæ˙Ü˘‹|Áˇ £˛Åw√˛ﬂ‰ˇ ?·Éæˇ –6ˇ ˇ §ˇ ˙3å?µ1øÛˆ_xæ°Ü˛E˜9ˇ √¸)ˇ †mˇ ˛?¯—ˇ ´˛Å∑ˇ ¯ˇ „_F‡“`—˝©çˇ ü≤˚√Ío˘ˆæ„Á?¯`ˇ Ö_Ùøˇ ¿Áˇ ?·É˛ˇ –6ˇ ˇ ü¸kËÃ\?µ1øÛˆ_x}Cˇ >◊‹|Âˇ ´˛Å∑ˇ ¯ˇ „G¸0¬Ø˙ﬂÔªøusing System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.OleDb;
+
+
+namespace WindowsFormsApp2
+{
+    public partial class Admincreatenewuser : Form
+    {
+        public Admincreatenewuser()
+        {
+            InitializeComponent();
+            
+        }
+
+        OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\\WindowsFormsApp2\\Database36.laccdb");
+        OleDbCommand cmd = new OleDbCommand();
+        OleDbDataAdapter da = new OleDbDataAdapter();
+        private void TxtAdmCreateusername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Admincreatenewuser_Load(object sender, EventArgs e)
+        {
+            
+        }
+        private void BtnAdmCreateback_Click(object sender, EventArgs e)
+        {
+            AdminHome AdminHome = new AdminHome();
+            this.Hide();
+            AdminHome.Show();
+        }
+
+        private void TxtAdmCreateusername_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtAdmCreateAccType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAdmCreatesubmit_Click(object sender, EventArgs e)
+        {
+            if (TxtAdmCreateAccType.Text == "Admin" || TxtAdmCreateAccType.Text == "admin")
+            {
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "INSERT INTO Admin ([ManagementID],[Username],[Password],[Forename],[Surname],[Email],[Mobile number],[Postcode]) values ('" + TxtAdmCreateID.Text + "','" + TxtAdmCreateusername.Text + "','" + TxtAdmCreatepassword.Text + "','" + TxtAdmCreateforename.Text + "','" + TxtAdmCreatesurname.Text + "','" + TxtAdmCreateemail.Text + "','" + TxtAdmCreatemobile.Text + "','" + TxtAdmCreatepostcode.Text + "')";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("New user has been created");
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was an error trying to create this user" + ex);
+                }
+            }
+            if (TxtAdmCreateAccType.Text == "Staff" || TxtAdmCreateAccType.Text == "staff")
+            {
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "INSERT INTO Staff ([Username], [Password],[Forename],[Surname],[Email],[Mobile number],[Postcode]) values('" + TxtAdmCreateusername.Text + "','" + TxtAdmCreatepassword.Text + "','" + TxtAdmCreateforename.Text + "','" + TxtAdmCreatesurname.Text + "','" + TxtAdmCreateemail.Text + "','" + TxtAdmCreatemobile.Text + "','" + TxtAdmCreatepostcode.Text + "')";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("New user has been created");
+                    con.Close();
+                    con.Dispose();
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("There was an error trying to create this user");
+                }
+            }
+            if (TxtAdmCreateAccType.Text == "Management" || TxtAdmCreateAccType.Text == "management")
+            {
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "INSERT INTO Management ([ManagementID],[Username],[Password],[Forename],[Surname],[Email],[Mobile number],[Postcode]) values ('" + TxtAdmCreateID.Text + "','" + TxtAdmCreateusername.Text + "','" + TxtAdmCreatepassword.Text + "','" + TxtAdmCreateforename.Te{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Microsoft.Win32.Registry/5.0.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "6.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/6.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/6.0.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "6.0.0",
+          "System.Security.Permissions": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Data.OleDb/6.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0",
+          "System.Configuration.ConfigurationManager": "6.0.0",
+          "System.Diagnostics.PerformanceCounter": "6.0.0",
+          "System.Memory": "4.5.4",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.OleDb.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Data.OleDb.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Diagnostics.PerformanceCounter/6.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0",
+          "System.Configuration.ConfigurationManager": "6.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Drawing.Common/6.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "6.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Drawing.Common.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp3.1/System.Drawing.Common.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          },
+          "runtimes/win/lib/netcoreapp3.1/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {},
+      "System.Security.AccessControl/6.0.0": {
+        "dependencies": {
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/6.0.0": {
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Security.Permissions/6.0.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "6.0.0",
+          "System.Windows.Extensions": "6.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Security.Permissions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/5.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "System.Windows.Extensions/6.0.0": {
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Windows.Extensions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.1/System.Windows.Extensions.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Win32.Registry/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg==",
+      "path": "microsoft.win32.registry/5.0.0",
+      "hashPath": "microsoft.win32.registry.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
+      "path": "microsoft.win32.systemevents/6.0.0",
+      "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7T+m0kDSlIPTHIkPMIu6m6tV6qsMqJpvQWW2jIc2qi7sn40qxFo0q+7mEQAhMPXZHMKnWrnv47ntGlM/ejvw3g==",
+      "path": "system.configuration.configurationmanager/6.0.0",
+      "hashPath": "system.configuration.configurationmanager.6.0.0.nupkg.sha512"
+    },
+    "System.Data.OleDb/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LQ8PjTIF1LtrrlGiyiTVjAkQtTWKm9GSNnygIlWjhN9y88s7xhy6DUNDDkmQQ9f6ex7mA4k0Tl97lz/CklaiLg==",
+      "path": "system.data.oledb/6.0.0",
+      "hashPath": "system.data.oledb.6.0.0.nupkg.sha512"
+    },
+    "System.Diagnostics.PerformanceCounter/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gbeE5tNp/oB7O8kTTLh3wPPJCxpNOphXPTWVs1BsYuFOYapFijWuh0LYw1qnDo4gwDUYPXOmpTIhvtxisGsYOQ==",
+      "path": "system.diagnostics.performancecounter/6.0.0",
+      "hashPath": "system.diagnostics.performancecounter.6.0.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NfuoKUiP2nUWwKZN6twGqXioIe1zVD0RIj2t976A+czLHr2nY454RwwXs6JU9Htc6mwqL6Dn/nEL3dpVf2jOhg==",
+      "path": "system.drawing.common/6.0.0",
+      "hashPath": "system.drawing.common.6.0.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
+    },
+    "System.Security.AccessControl/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AUADIc0LIEQe7MzC+I0cl0rAT8RrTAKFHl53yHjEUzNVIaUlhFY11vc2ebiVJzVBuOzun6F7FBA+8KAbGTTedQ==",
+      "path": "system.security.accesscontrol/6.0.0",
+      "hashPath": "system.security.accesscontrol.6.0.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rp1gMNEZpvx9vP0JW0oHLxlf8oSiQgtno77Y4PLUBjSiDYoD77Y8uXHr1Ea5XG4/pIKhqAdxZ8v8OTUtqo9PeQ==",
+      "path": "system.security.cryptography.protecteddata/6.0.0",
+      "hashPath": "system.security.cryptography.protecteddata.6.0.0.nupkg.sha512"
+    },
+    "System.Security.Permissions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T/uuc7AklkDoxmcJ7LGkyX1CcSviZuLCa4jg3PekfJ7SU0niF0IVTXwUiNVP9DSpzou2PpxJ+eNY2IfDM90ZCg==",
+      "path": "system.security.permissions/6.0.0",
+      "hashPath": "system.security.permissions.6.0.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t0MGLukB5WAVU9bO3MGzvlGnyJPgUlcwerXn1kzBRjwLKixT96XV0Uza41W49gVd8zEMFu9vQEFlv0IOrytICA==",
+      "path": "system.security.principal.windows/5.0.0",
+      "hashPath": "system.security.principal.windows.5.0.0.nupkg.sha512"
+    },
+    "System.Windows.Extensions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
+      "path": "system.windows.extensions/6.0.0",
+      "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    }
+  }
+}                                                                                                                                                                                       NPNRnk0nqB+eH/AAUM8SpqvxP03SEfP9l2I3Lno0h3H9AtfJRr1f8Aae8T
+        /wDCVfHLxdeK++JbwwRtn+FAFH8q8oJGcV+25JR9jgacfL8z8rzKr7TFTfmxBR3ozilBr3jzgUZNez/s
+        jeFV8U/H3wnDLF51vbTPeyD0ESM6k/8AAwteNrivsb/gnP4WW68W+KNekXJtLSO1iYjoXbc36IPzrwc8
+        rexwFSXlb79D0ssh7bFwg+/5an3xEMVPUMYqevxG9z9TtbQKKKKoAooooAKKKKACiiigAooppNAC9qxv
+        GWvReFvCmr6vOwSKytZJ2P8AuqTWx2rw79szxMPDv7P/AIiUSbJr0JaoM8ncwz+ma3w9P2taFPu0vxMq
+        s1Tpym+iPyt1G+k1XULi8lJMtxI0zk9yxyahHFNGO1OFfvtOHJTjFdEfjzk5ScgpQaSjFajFA4paQUtM
+  {
+  "runtimeOptions": {
+    "tfm": "netcoreapp3.1",
+    "framework": {
+      "name": "Microsoft.WindowsDesktop.App",
+      "version": "3.1.0"
+    },
+    "additionalProbingPaths": [
+      "C:\\Users\\Q200370\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Q200370\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+    ],
+    "configProperties": {
+      "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
+    }
+  }
+}                         lG9s/TIH4V6mF4pkKLEiooCq
+        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 format 3   @        1                                                             .4    ˚    ˚®K
+é	ã€Që˘RJ                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Å$W-ÅQindexSymbolDefinition_DefiningFileId_IndexSymbolDefinitionCREATE INDEX [SymbolDefinition_DefiningFileId_Index]
+    ON [SymbolDefinition] ([DefiningFileId])ÅC-ÅGindexSymbolDefinition_Name_IndexSymbolDefinitionCREATE INDEX [SymbolDefinition_Name_Index]
+    ON [SymbolDefinition] ([Name] COLLATE NOCASE)Ö=--ä-tableSymbolDefinitionSymbolDefinitionCREATE TABLE [SymbolDefinition]
+(
+    [SymbolDefinitionId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [ProviderId] INTEGER NOT NULL
+        REFERENCES [ProviderEntity]([ProviderId])
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
+    [Name] NVARCHAR(255) NOT NULL COLLATE NOCASE,
+    [FullyQualifiedName] NVARCHAR(255) COLLATE NOCASE,
+    [Kind] INTEGER NOT NULL,
+    [Accessibility] INTEGER NOT NULL,
+    [DefiningFileId] INTEGER NOT NULL
+        REFERENCES [FileSystemEntity]([FileSystemEntityId]) 
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
+    [LocationRow] INTEGER NOT NULL,
+    [LocationColumn] INTEGER NOT NULL
+)Å/_-Å_indexFileScannerCache_FileSystemEntityId_IndexFileScannerCacheCREATE INDEX [FileScannerCache_FileSystemEntityId_Index]
+    ON [FileScannerCache]([FileSystemEntityId])ÉU
+--Ü]tableFileScannerCacheFileScannerCacheCREATE TABLE [FileScannerCache]
+(
+    [FileScannerCacheId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
+    [FileSystemEntityId] INTEGER NOT NULL REFERENCES [FileSystemEntity]([FileSystemEntityId])
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
+    [ProviderId] INTEGER NOT NULL REFERENCES [ProviderEntity]([ProviderId])
+        ON DELETE CASCADE,
+    [Type] INTEGER NOT NULL,
+    [Timestamp] DATETIME NULL
+)Å-	/)ÇindexProviderType_TypeProviderEntity
+CREATE UNIQUE INDEX [ProviderType_Type]
+    ON [ProviderEntity] ([ProviderType] COLLATE NOCASE,[ProviderVersion] COLLATE NOCASE)Ç ))É;tableProviderEntityProviderEntity	CREATE TABLE [ProviderEntity]
+(
+    [ProviderId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [ProviderType] NVARCHAR(20) NOT NULL COLLATE NOCASE,
+    [ProviderVersion] NVARCHAR(20) NOT NULL COLLATE NOCASE
+)Å:E-ÇindexFileSystemEntity_Parent_NameFileSystemEntityCREATE UNIQUE INDEX [FileSystemEntity_Parent_Name]
+    ON [FileSystemEntity] ([Name] COLLATE NOCASE, [ParentFileSystemEntityId])ÅBk-ÅyindexFileSystemEntity_ParentFileSystemEntityId_IndexFileSystemEntityCREATE INDEX [FileSystemEntity_ParentFileSystemEntityId_Index]
+    ON [FileSystemEntity] ([ParentFileSystemEntityId])ÅC-ÅGindexFileSystemEntity_Name_IndexFileSystemEntityCREATE INDEX [FileSystemEntity_Name_Index]
+    ON [FileSystemEntity] ([Name] COLLATE NOCASE)ÉH--ÜCtableFileSystemEntityFileSystemEntityCREATE TABLE [FileSystemEntity]
+(
+    [FileSystemEntityId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [Name] NVARCHAR(255) NOT NULL COLLATE NOCASE,
+    [ParentFileSystemEntityId] INTEGER NULL
+        REFERENCES [FileSystemEntity]([FileSystemEntityId])
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
+    [IsFile] BIT NOT NULL,
+    [LastObserved] DATETIME NOT NULL DEFAULT current_timestamp
+)o1ÅindexSetting_Name_IndexSettingCREATE INDEX [Setting_Name_Index]
+  ON [Setting] ([Name] COLLATE NOCASE)P++Ytablesqlite_sequencesqlite_sequenceCREATE TABLE sqlite_sequence(name,seq)ÅGÇetableSettingSettingCREATE TABLE [Setting]
+(
+    [SettingId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [Name] NVARCHAR(255) NOT NULL COLLATE NOCASE,
+    [Value] NVARCHAR(255) NU   
+   ø Ëøß^;ø                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
